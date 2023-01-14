@@ -1,8 +1,8 @@
 import this
-import numpy
+import numpy as np
 
 def suma():
-    this.res = this.valor1 + this.valor2
+    this.res =  this.valor1 + this.valor2
 
 def resta():
     this.res = this.valor1 - this.valor2
