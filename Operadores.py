@@ -1,6 +1,8 @@
+# librerias
+import math
 import this
-import numpy as np
 
+# Funciones de calculadora
 def suma():
     this.res =  this.valor1 + this.valor2
 
@@ -13,6 +15,10 @@ def multiplicar():
 def dividir():
     this.res = this.valor1 / this.valor2
 
+def raiz():
+    this.res = math.sqrt(this.val1)
+
+# Clase que contiene operadores suma, resta, multiplicación y divición
 class Calculadora:
     res = 0
     valor1 = 0
@@ -31,4 +37,10 @@ class Calculadora:
             dividir()
         return this.res
 
-
+# clase que contiene 
+class OprRaiz:
+    valraiz = 0
+    def raiz(val1):
+        this.valraiz = val1
+        this.res = math.sqrt(this.valraiz)
+        retun = this.res
