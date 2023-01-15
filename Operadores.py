@@ -21,6 +21,15 @@ def raiz():
 def exponente():
     this.resExp = np.power(this.val1Exp, this.val2Exp)
 
+def seno():
+    this.resTrig = np.sin(this.valTrig)
+
+def coseno():
+    this.resTrig = np.cos(this.valTrig)
+
+def tangente():
+    this.resTrig = np.tan(this.valTrig)
+
 # Clase que contiene operadores suma, resta, multiplicación y divición
 class Calculadora:
     res = 0.0
@@ -61,3 +70,23 @@ class OprExponente:
         exponente()
         return str(this.resExp)
 
+class OprTrigonometria:
+    valTrig = 0.0
+    opcion = 0
+    resTrig = 0.0
+    respuesta = ''
+    def trigonometria(opc, val1):
+        this.opcion = opc
+        this.valTrig = val1
+        if this.opcion == 7:
+            seno()
+            this.respuesta = 'El valor del Seno es: ' + str(this.resTrig)
+            return this.respuesta
+        elif this.opcion == 8:
+            seno()
+            this.respuesta = 'El valor del Coseno es: ' + str(this.resTrig)
+            return this.respuesta
+        elif this.opcion == 9:
+            seno()
+            this.respuesta = 'El valor del la Tangente es: ' + str(this.resTrig)
+            return this.respuesta
