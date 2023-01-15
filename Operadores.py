@@ -1,5 +1,5 @@
 # librerias
-import math
+import numpy as np
 import this
 
 # Funciones de calculadora
@@ -16,13 +16,16 @@ def dividir():
     this.res = this.valor1 / this.valor2
 
 def raiz():
-    this.res = math.sqrt(this.val1)
+    this.resRaiz = this.val1raiz ** this.val2raiz
+
+def exponente():
+    this.resExp = np.power(this.val1Exp, this.val2Exp)
 
 # Clase que contiene operadores suma, resta, multiplicación y divición
 class Calculadora:
-    res = 0
-    valor1 = 0
-    valor2 = 0
+    res = 0.0
+    valor1 = 0.0
+    valor2 = 0.0
 
     def opr(opcion, val1, val2):
         this.valor1 = val1
@@ -35,12 +38,26 @@ class Calculadora:
             multiplicar()
         elif opcion == 4:
             dividir()
-        return this.res
+        return str(this.res)
 
-# clase que contiene 
+# clase que contiene operacion de la raiz
 class OprRaiz:
-    valraiz = 0
-    def raiz(val1):
-        this.valraiz = val1
-        this.res = math.sqrt(this.valraiz)
-        retun = this.res
+    val1raiz = 0.0
+    val2raiz = 0.0
+    resRaiz = 0.0
+    def raiz(val1, val2):
+        this.val1raiz = val1
+        this.val2raiz = val2
+        raiz()
+        return str(this.resRaiz)
+
+class OprExponente:
+    val1Exp = 0.0
+    val2Exp = 0.0
+    resExp = 0.0
+    def exponentes(val1, val2):
+        this.val1Exp = val1
+        this.val2Exp = val2
+        exponente()
+        return str(this.resExp)
+
